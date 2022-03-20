@@ -20,7 +20,7 @@ class GMM_AkkarEtAl2014(GMM):
     '''
     def __init__(self, column_names: list):
         super().__init__( column_names = column_names, distance_metric = 'Repi')
-        self.coeff = pd.read_csv('AkkarEtAl2014_GMPE_coeffs_Repi.csv','deliminiter',';')  
+        self.coeff = pd.read_csv('AkkarEtAl2014_GMPE_coeffs_Repi.csv',sep=';')  
                  
     def get_mu_ref_rock(self, M, R, sof, T):
         
