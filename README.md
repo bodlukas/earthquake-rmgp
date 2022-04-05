@@ -1,6 +1,6 @@
 # Earthquake RMGP
 
-This repository collects the Python code for the risk model informed Gaussian process (RMGP) framwork for post-earthquake updating of regional damage estimates. The code accompanies following manuscript:
+This repository collects the Python code for the risk model informed Gaussian process (RMGP) framework that updates regional damage estimates with early post-earthquake inspection data. The code accompanies the following manuscript: 
 > Bodenmann L., Reuland Y. and Stojadinovic B. (2022): *Dynamic Post-Earthquake Updating of Regional Damage Estimates Using Gaussian Processes*; Submitted to Reliability Engineering & System Safety. Preprint available at https://doi.org/10.31224/2205
 
 The manuscript explains the framework and presents its application to one simulated and two real earthquake damage datasets. Feel free to use and enhance the current implementation, but make sure to cite the original work.
@@ -27,5 +27,5 @@ The `example.ipynb` notebook explains the basic workflow and functionalities usi
     - `model.py`: Main model that combines the different components and is used for as a wrapper for inference and predictions.
     - `utils_gpflow.py`: GPFlow-compatible objects for mean functions, likelihoods and variational inference that are specifically adapted for RMGP.
 - utils: Contains further utilities used to genereate random inspection sequences and to collect results.
-- other_models: Contains the implementations of Random Forest and Ordered linear probit methods that we used in the manuscript to compare to RMGP.
+- other_models: Contains the implementations of Random Forest and Ordered linear probit methods that we used in the manuscript to compare with RMGP.
 - data_toyexample: Contains the data for the toy example used in the `example.ipynb` notebook.

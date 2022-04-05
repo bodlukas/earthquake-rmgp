@@ -19,9 +19,9 @@ from .modules import (SpatialGMM, TypologyAttributionModule,
 
 class RMGP(object):
     '''
-    Collects all submodules and methods to predict damage levels and typology
+    Collects all submodules and methods to predict damage states and typology
     attribute combinations and to perform inference using data from seismic
-    network stations and / or from building inspections.
+    network stations and/or from (post-earthquake) building inspections.
     
     SpGMM, TAM and DEM are the specified modules and EventChar collects
     the event characteristics. See their documentation for further details.
@@ -53,8 +53,8 @@ class RMGP(object):
     def Inference_station_data(self, df_station: pd.DataFrame, 
                                recorded_ims: np.array):
         '''
-        Performs inference using data D_S = (X_S, z) from Ns seismic network 
-        stations.
+        Performs inference using measured intensity data D_S = (X_S, z) 
+        from Ns seismic network stations.
         Once this function is called, sampling of function f will be with
         respect to the posterior predictive p(f_T | D_S).
 
@@ -91,14 +91,14 @@ class RMGP(object):
         Parameters
         ----------
         df_insp : pd.DataFrame
-            Dataframe with required information about the inspected bldgs. 
+            Dataframe with required information about the inspected buildings. 
             Specifically, it should provide the columns specified in 
             column_names of the assigned GMM and column_names of the assigned
             typological attribution model.
         obs_a : np.array (M, )
             Typological attribute combinations assigned during inspection.
         obs_y : np.array (M, )
-            Damage levels assigned during inspection.
+            Damage states assigned during inspection.
 
         '''
         
@@ -196,7 +196,7 @@ class RMGP(object):
     def Sample_damage(self, df_target: pd.DataFrame, nSamples: int,
                           aggregate: bool=False):
         '''
-        Samples damage levels y in (0,1,...,cy-1) for N target 
+        Samples damage states y in (0,1,...,cy-1) for N target 
         buildings from p(f) or p(f|D_S) or p(f|D_I,D_S) and p(g) or p(g|D_I), 
         depending on whether station data D_S and inspection data D_I is 
         available and processed.        
@@ -211,7 +211,7 @@ class RMGP(object):
         nSamples : int
             Number of samples to generate.
         aggregate : bool, optional
-            Whether to aggregate samples for each damage level. 
+            Whether to aggregate samples for each damage state. 
             The default is False.
 
         Returns
