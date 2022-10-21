@@ -7,7 +7,7 @@ This repository collects the Python code for the Risk Model informed Gaussian Pr
 
 The manuscript explains the framework and presents its application to one simulated and two real earthquake damage datasets. Feel free to use and enhance the current implementation, but make sure to cite the original work.
 
-![alt text](https://github.com/bodlukas/earthquake-rmgp/blob/main/data_toyexample/rmgp_github_dark.png#gh-dark-mode-only)
+![alt text](https://github.com/bodlukas/earthquake-rmgp/blob/main/data_toyexample/rmgp_github_darkm.png#gh-dark-mode-only)
 ![alt text](https://github.com/bodlukas/earthquake-rmgp/blob/main/data_toyexample/rmgp_github_bright.png#gh-light-mode-only)
 
 ## Supplementary Material
