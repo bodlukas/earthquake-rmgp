@@ -3,7 +3,7 @@
 [![DOI](https://zenodo.org/badge/543142934.svg)](https://zenodo.org/badge/latestdoi/543142934)
 
 This repository collects the Python code for the Risk Model informed Gaussian Process (RMGP) framework that updates regional damage estimates with early post-earthquake inspection data. The code accompanies the following manuscript: 
-> Bodenmann L., Reuland Y. and Stojadinovic B. (2022): *Dynamic Post-Earthquake Updating of Regional Damage Estimates Using Gaussian Processes*; Submitted to Reliability Engineering & System Safety. Preprint available at https://doi.org/10.31224/2205
+> Bodenmann L., Reuland Y. and Stojadinovic B. (2023): *Dynamic Post-Earthquake Updating of Regional Damage Estimates Using Gaussian Processes*; Reliability Engineering and System Safety. https://doi.org/10.1016/j.ress.2023.109201
 
 The manuscript explains the framework and presents its application to one simulated and two real earthquake damage datasets. Feel free to use and enhance the current implementation, but make sure to cite the original work.
 
