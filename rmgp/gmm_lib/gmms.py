@@ -18,9 +18,10 @@ class GMM_AkkarEtAl2014(GMM):
     
     This class uses coefficiens derived for the epicentral distance metric.
     '''
-    def __init__(self, column_names: list):
+    def __init__(self, column_names: list, path_coeff: str):
         super().__init__( column_names = column_names, distance_metric = 'Repi')
-        self.coeff = pd.read_csv('AkkarEtAl2014_GMPE_coeffs_Repi.csv',sep=';')  
+        self.coeff = pd.read_csv(path_coeff, sep=';')
+        #self.coeff = pd.read_csv('AkkarEtAl2014_GMPE_coeffs_Repi.csv',sep=';')  
                  
     def get_mu_ref_rock(self, M, R, sof, T):
         
